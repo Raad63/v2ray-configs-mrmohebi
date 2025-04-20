@@ -4,7 +4,6 @@
 [فارسی](https://github.com/MatinGhanbari/v2ray-configs/blob/main/docs/README/README.fa.md) | [中文](https://github.com/MatinGhanbari/v2ray-configs/blob/main/docs/README/README.zh.md)
 
 [![Stars](https://img.shields.io/github/stars/MatinGhanbari/v2ray-configs?style=flat-square)](https://github.com/MatinGhanbari/v2ray-configs/stargazers)
-
 ![Last Updated](https://img.shields.io/github/last-commit/MatinGhanbari/v2ray-configs?style=flat-square) [![MIT](https://img.shields.io/badge/license-MIT-green?style=flat-square)](https://lbesson.mit-license.org/) ![Size](https://img.shields.io/github/repo-size/MatinGhanbari/v2ray-configs?style=flat-square)
 
 ## ✨ Key Features
