@@ -46,11 +46,12 @@ def decode_base64(encoded):
 
 def filter_for_protocols(data, protocols):
     filtered_data = []
-    for line in data:
-        if any(protocol in line for protocol in protocols):
-            if line.count('#') == 1:
-                line = line[:line.index('#') + 1] + SETTINGS['tag']
-            filtered_data.append(line)
+    for datum in data:
+        for line in datum.split("\n"):
+            if any(protocol in line for protocol in protocols):
+                if line.count('#') == 1:
+                    line = line[:line.index('#') + 1] + SETTINGS['tag']
+                filtered_data.append(line)
     return filtered_data
 
 
