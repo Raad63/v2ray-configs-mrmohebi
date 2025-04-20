@@ -13,7 +13,7 @@ def update_v2ray():
     merged_configs = filter_for_protocols(combined_data, SETTINGS['protocols'])
 
     output_filename = os.path.join(output_folder, "all_sub.txt")
-    base64_filename = os.path.join(base64_folder, "all_base64_sub.txt")
+    base64_filename = os.path.join(base64_folder, "all_sub.txt")
 
     with open(output_filename, "w+", encoding="utf-8") as f:
         f.write(content_manager.get_v2ray())
