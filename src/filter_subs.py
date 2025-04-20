@@ -12,7 +12,10 @@ def filter_subs():
     protocols = SETTINGS['protocols'][:-1]
     protocol_data = {protocol: content_manager.get_filtered(protocol=protocol) for protocol in protocols}
 
-    response = requests.get(f"{SETTINGS['repo']}/configs/v2ray/all_sub.txt").text
+    raw_repo = SETTINGS['raw_repo']
+    out_dir = SETTINGS['out_dir']
+    url = f"{raw_repo}/{out_dir}/v2ray/all_sub.txt"
+    response = requests.get(url).text
     for config in response.splitlines():
         for protocol in protocols:
             if config.startswith(protocol):
@@ -20,7 +23,7 @@ def filter_subs():
                 break
 
     for protocol, data in protocol_data.items():
-        file_path = os.path.join(output_folder,"subs", f"{protocol}.txt")
+        file_path = os.path.join(output_folder, "subs", f"{protocol}.txt")
         encoded_data = base64.b64encode(data.encode("utf-8")).decode("utf-8")
         with open(file_path, "w+", encoding="utf-8") as file:
             file.write(encoded_data)
