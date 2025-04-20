@@ -31,6 +31,11 @@ https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions
     **You can change sub id from 1 to 39.** Example:
 ```
 https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/v2ray/subs/sub1.txt
+https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/v2ray/subs/sub2.txt
+https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/v2ray/subs/sub3.txt
+https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/v2ray/subs/sub4.txt
+...
+https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/v2ray/subs/sub39.txt
 ```
 
 ### ⛓️ By Protocol Subscriptions
@@ -52,7 +57,7 @@ https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions
 ```
 - SS: 
 ```
-https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/filtered/subs/vmess.txt
+https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/filtered/subs/ss.txt
 ```
 - Tuic: 
 ```
