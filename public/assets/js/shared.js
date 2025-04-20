@@ -1,4 +1,4 @@
-contributors_url = "https://api.github.com/repos/MatinGhanbari/v2ray-configs/contributors?per_page=5&page=1";
+contributors_url = "https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/refs/heads/main/public/assets/data/contributors.json";
 
 configLines = [];
 

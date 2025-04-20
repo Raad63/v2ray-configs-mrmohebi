@@ -13,36 +13,39 @@ jobs:
   update-configs:
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v3
+      - name: Checkout code
+        uses: actions/checkout@v3
 
-    - name: Set up Python
-      uses: actions/setup-python@v4
-      with:
-        python-version: '3.11'
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.11"
 
-    - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip
-        pip install -r requirements.txt
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
 
-    - name: Update V2Ray configs
-      run: python src/update_v2ray.py
+      - name: Update V2Ray configs
+        run: python src/update_v2ray.py
 
-    - name: Update Warp configs
-      run: python src/update_warp.py
+      - name: Update Warp configs
+        run: python src/update_warp.py
 
-    - name: Filter sub files
-      run: python src/filter_subs.py
+      - name: Filter sub files
+        run: python src/filter_subs.py
 
-    - name: Commit and push changes
-      uses: stefanzweifel/git-auto-commit-action@v4
-      with:
-        commit_message: "🔄 Auto-update configs (10 min interval)"
-        branch: main
-        file_pattern: 'subscriptions/*'
-        commit_user_name: GitHub Actions
-        commit_user_email: actions@github.com
-        commit_author: GitHub Actions <actions@github.com>
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Update contributors
+        run: python src/update_contributors.py
+
+      - name: Commit and push changes
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: "🔄 Auto-update configs (10 min interval)"
+          branch: main
+          file_pattern: "subscriptions/*"
+          commit_user_name: GitHub Actions
+          commit_user_email: actions@github.com
+          commit_author: GitHub Actions <actions@github.com>
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
