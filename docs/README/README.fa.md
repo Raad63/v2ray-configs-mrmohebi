@@ -28,7 +28,7 @@ https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions
 
     **می‌توانید شناسه اشتراک را از ۱ تا ۳۹ تغییر دهید.** مثال:
 ```
-https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/v2ray/all_sub.txt
+https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/v2ray/subs/sub1.txt
 ```
 
 ### ⛓️ اشتراک‌های بر اساس پروتکل
