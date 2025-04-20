@@ -121,12 +121,7 @@ function get_contributors(){
 
   var x = "";
 
-  fetch(contributors_url, {
-      method: 'GET',
-      headers: {
-          'Content-Type': 'application/json',
-      }
-  })
+  fetch(contributors_url)
   .then((response) => response.json())
   .then((data) => {
       data.reverse();
