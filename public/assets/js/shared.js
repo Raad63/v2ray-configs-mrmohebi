@@ -54,7 +54,7 @@ function show_all_configs(){
     });
 }
 
-function get_configs(){
+function get_configs(isBase64=false){
   const tbody = document.querySelector('tbody');
 
   while (tbody.firstChild) {
@@ -64,8 +64,14 @@ function get_configs(){
   fetch(sub_url)
   .then((response) => response.text())
   .then((text) => {
+    let lines="";
+    if (isBase64){ 
+      lines = atob(text).split("\n");
+    }else{
+      lines = text.split("\n");
+    }
+
     const table = document.getElementById("proxy-table");
-    let lines = text.split("\n");
     lines = lines.slice(5, lines.length);
     shuffle(lines);
 
@@ -118,35 +124,35 @@ function get_configs(){
 
 function get_contributors(){
   const contributors = document.querySelector('#contributors');
-
   var x = "";
-
   fetch(contributors_url)
   .then((response) => response.json())
   .then((data) => {
-      data.reverse();
-
-      data.forEach((contributor, index) => {
-          x += `
-          <div class="item online">
-            <a href="${contributor.html_url}" target="_blank">
-            <img
-              src="${contributor.avatar_url}"
-              alt="${contributor.login}"
-              style="width: 3rem; border-radius: 20%"
-            />
-            </a>
-            <div class="right">
-              <div class="info">
-                <h3><a href="${contributor.html_url}" target="_blank">${contributor.login}</a></h3>
-                <small class="text-muted">Contributions: ${contributor.contributions}</small>
-              </div>
+    contrib_list = data;
+    if(contrib_list.length>3){
+      contrib_list = data.slice(0,3);
+    }
+    data.forEach((contributor, index) => {
+        x += `
+        <div class="item online">
+          <a href="${contributor.html_url}" target="_blank">
+          <img
+            src="${contributor.avatar_url}"
+            alt="${contributor.login}"
+            style="width: 3rem; border-radius: 20%"
+          />
+          </a>
+          <div class="right">
+            <div class="info">
+              <h3><a href="${contributor.html_url}" target="_blank">${contributor.login}</a></h3>
+              <small class="text-muted">Contributions: ${contributor.contributions}</small>
             </div>
           </div>
-          `;
-      });
+        </div>
+        `;
+    });
 
-      contributors.innerHTML = x;
+    contributors.innerHTML = x;
   })
   .catch((error) => console.error(error));
 }
