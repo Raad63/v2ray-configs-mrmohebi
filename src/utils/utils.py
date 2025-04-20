@@ -48,7 +48,8 @@ def filter_for_protocols(data, protocols):
     filtered_data = []
     for line in data:
         if any(protocol in line for protocol in protocols):
-            if line.count('#') == 1: line = line[:line.index('#') + 1] + SETTINGS['tag']
+            if line.count('#') == 1:
+                line = line[:line.index('#') + 1] + SETTINGS['tag']
             filtered_data.append(line)
     return filtered_data
 
