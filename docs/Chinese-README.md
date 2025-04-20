@@ -8,9 +8,9 @@
 
 
 ## 使用方法
-👉 要使用这些配置之一，只需打开位于根目录的 All_Configs_Sub.txt 文件。该文件包含各种 V2ray 配置文件的链接列表，你可以在 V2ray 客户端中使用它们。从 All_Configs_Sub.txt 文件中复制想要使用的配置文件的这个链接，然后导入到你的 V2ray 客户端中。有关更多信息，请参阅客户端的文档。
+👉 要使用这些配置之一，只需打开位于根目录的 all_sub.txt 文件。该文件包含各种 V2ray 配置文件的链接列表，你可以在 V2ray 客户端中使用它们。从 all_sub.txt 文件中复制想要使用的配置文件的这个链接，然后导入到你的 V2ray 客户端中。有关更多信息，请参阅客户端的文档。
 
-如果上面的链接对您不起作用，请使用这个链接：[All_Config_base64_Sub.txt](https://raw.githubusercontent.com/barry-far/V2ray-Configs/main/All_Configs_base64_Sub.txt)。
+如果上面的链接对您不起作用，请使用这个链接：[All_Config_base64_Sub.txt](https://raw.githubusercontent.com/barry-far/V2ray-Configs/main/all_base64_sub.txt)。
 
 只需将这些链接复制到您的客户端即可使用：
 

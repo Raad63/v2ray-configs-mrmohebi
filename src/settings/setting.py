@@ -1,5 +1,6 @@
 import json
 
+
 class Setting:
     _setting = None
 
@@ -9,5 +10,6 @@ class Setting:
             with open('appsettings.json', 'r') as file:
                 cls._setting = json.loads(file.read())
         return cls._setting
+
 
 SETTINGS = Setting.read_settings()
