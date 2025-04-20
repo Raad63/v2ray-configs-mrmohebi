@@ -25,12 +25,16 @@ Choose either method:
 https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/v2ray/all_sub.txt
 ```
 
+---
+
 - Splitted Subs [200 configs per sub]:
 
     **You can change sub id from 1 to 39.** Example:
-    ```
-    https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/v2ray/subs/sub1.txt
-    ```
+```
+https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/v2ray/subs/sub1.txt
+```
+
+---
 
 - By Protocol:
     - VMess: 
