@@ -18,13 +18,13 @@ Choose either method:
 1. Use the subscription URLs provided
 2. Manually download configs from `subscriptions` folder
 
-### 🔗 Subscription URLs
+### 🔗 All Subscriptions
 - All Protocols [+7500 configs]:
 ```
 https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/v2ray/all_sub.txt
 ```
 
----
+### 👨‍🚀 Splitted Subscriptions
 
 - Splitted Subs [200 configs per sub]:
 
@@ -33,37 +33,35 @@ https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions
 https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/v2ray/subs/sub1.txt
 ```
 
----
-
-- By Protocol:
-    - VMess: 
-    ```
-    https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/filtered/subs/vmess.txt
-    ```
-    - VLess: 
-    ```
-    https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/filtered/subs/vless.txt
-    ```
-    - Trojan: 
-    ```
-    https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/filtered/subs/trojan.txt
-    ```
-    - SSR: 
-    ```
-    https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/filtered/subs/ssr.txt
-    ```
-    - SS: 
-    ```
-    https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/filtered/subs/vmess.txt
-    ```
-    - Tuic: 
-    ```
-    https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/filtered/subs/tuic.txt
-    ```
-    - Hy2: 
-    ```
-    https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/filtered/subs/hy2.txt
-    ```
+### ⛓️ By Protocol Subscriptions
+- VMess: 
+```
+https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/filtered/subs/vmess.txt
+```
+- VLess: 
+```
+https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/filtered/subs/vless.txt
+```
+- Trojan: 
+```
+https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/filtered/subs/trojan.txt
+```
+- SSR: 
+```
+https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/filtered/subs/ssr.txt
+```
+- SS: 
+```
+https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/filtered/subs/vmess.txt
+```
+- Tuic: 
+```
+https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/filtered/subs/tuic.txt
+```
+- Hy2: 
+```
+https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/filtered/subs/hy2.txt
+```
 
 ## 📲 Client Configuration
 - [Hiddify-Next](https://github.com/hiddify/hiddify-next)
