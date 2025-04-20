@@ -1,86 +1,85 @@
-# 🔒 Free V2ray Config 🌐
-💻 This repository contains a collection of free V2ray configuration files that you can use with your V2ray client to access the internet securely and anonymously.
+# 🔓 Open V2ray Configurations For All
+🖥️ Community-maintained repository offering free V2ray configs to help you browse securely and privately.
 
-[فارسی](https://github.com/MatinGhanbari/v2ray-configs/blob/main/docs/README/Persian-README.md) | [中文](https://github.com/MatinGhanbari/v2ray-configs/blob/main/docs/README/Chinese-README.md)
+[فارسی](https://github.com/MatinGhanbari/v2ray-configs/blob/main/docs/README/README.fa.md) | [中文](https://github.com/MatinGhanbari/v2ray-configs/blob/main/docs/README/README.zh.md)
 
-[![GitHub stars](https://img.shields.io/github/stars/MatinGhanbari/v2ray-configs.svg)](https://github.com/MatinGhanbari/v2ray-configs/stargazers)
+[![Stars](https://img.shields.io/github/stars/MatinGhanbari/v2ray-configs?style=flat-square)](https://github.com/MatinGhanbari/v2ray-configs/stargazers)
 
-![GitHub last commit](https://img.shields.io/github/last-commit/MatinGhanbari/v2ray-configs.svg) [![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://lbesson.mit-license.org/) ![GitHub repo size](https://img.shields.io/github/repo-size/MatinGhanbari/v2ray-configs)
+![Last Updated](https://img.shields.io/github/last-commit/MatinGhanbari/v2ray-configs?style=flat-square) [![MIT](https://img.shields.io/badge/license-MIT-green?style=flat-square)](https://lbesson.mit-license.org/) ![Size](https://img.shields.io/github/repo-size/MatinGhanbari/v2ray-configs?style=flat-square)
 
-## 📦 Features
-- Multiple protocol support (VMess, VLESS, Trojan, Shadowsocks, SSR, TUIC, Hysteria2, Warp)
-- Automatic configuration updates
-- Split configurations by protocol
-- Base64 encoded configurations
-- Regular updates from multiple sources
+## ✨ Key Features
+- Multi-protocol compatibility (VMess, VLESS, Trojan, Shadowsocks, SSR, TUIC, Hysteria2, Warp)
+- Auto-updating configurations every **10 minutes**
+- Organized by protocol type
+- Base64 encoded for convenience
+- Frequently refreshed sources
 
-## 📥 Usage
-To use these configurations, you can either:
-1. Use the subscription links below
-2. Download individual configuration files from the `subscriptions` directory
+## 🚀 Getting Started
+Choose either method:
+1. Use the subscription URLs provided
+2. Manually download configs from `subscriptions` folder
 
-### Subscription Links
-- Main Subscription:
+### 🔗 Subscription URLs
+- All Protocols [+7500 configs]:
 ```
-https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/all.txt
-```
-
-- Protocol-specific Subscriptions:
-```
-VMess: https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/vmess.txt
-VLESS: https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/vless.txt
-Trojan: https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/trojan.txt
-Shadowsocks: https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/ss.txt
-ShadowsocksR: https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/ssr.txt
-TUIC: https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/tuic.txt
-Hysteria2: https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/hy2.txt
-Warp: https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/warp.txt
+https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/v2ray/all_sub.txt
 ```
 
-## 📱 Client Setup
+- Splitted Subs [200 configs per sub]:
 
-### Windows/Linux
-Recommended clients:
+    **You can change sub id from 1 to 39.** Example:
+    ```
+    https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/v2ray/subs/sub1.txt
+    ```
+
+- By Protocol:
+    - VMess: 
+    ```
+    https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/filtered/subs/vmess.txt
+    ```
+    - VLess: 
+    ```
+    https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/filtered/subs/vless.txt
+    ```
+    - Trojan: 
+    ```
+    https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/filtered/subs/trojan.txt
+    ```
+    - SSR: 
+    ```
+    https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/filtered/subs/ssr.txt
+    ```
+    - SS: 
+    ```
+    https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/filtered/subs/vmess.txt
+    ```
+    - Tuic: 
+    ```
+    https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/filtered/subs/tuic.txt
+    ```
+    - Hy2: 
+    ```
+    https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/filtered/subs/hy2.txt
+    ```
+
+## 📲 Client Configuration
 - [Hiddify-Next](https://github.com/hiddify/hiddify-next)
 - [Nekoray](https://github.com/MatsuriDayo/nekoray)
 
-### Android
-Recommended clients:
-- [V2rayNG](https://github.com/2dust/v2rayNG)
-- [HiddifyNext](https://github.com/hiddify/hiddify-next/releases)
+## Contributing
+✍️ If you have a V2ray configuration file that you would like to contribute to this repository, simply create a new pull request and we will review it.
 
-### iOS/macOS
-Recommended clients:
-- [Streisand](https://apps.apple.com/us/app/streisand/id6450534064)
-- [ShadowRocket](https://apps.apple.com/ca/app/shadowrocket/id932747118)
-- [V2BOX](https://apps.apple.com/us/app/v2box-v2ray-client/id6446814690)
+## License
+📝 This repository is licensed under the MIT license. See [LICENSE](https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/LICENSE) for more information.
 
-## 🔧 Configuration
-The repository is configured through `appsettings.json` which includes:
-- Repository URL
-- Output directory
-- Lines per file
-- Timeout settings
-- Supported protocols
-- Source configurations
+## Contact
+🙋‍♀️ If you have any questions or concerns, please feel free to reach out to us via our discussions tracker.
 
-## 🤝 Contributing
-Contributions are welcome! If you have V2ray configurations to share, please:
-1. Fork the repository
-2. Add your configurations
-3. Submit a pull request
-
-## 📝 License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 🙏 Special Thanks
-- [@barry-far](https://github.com/barry-far)
-- [@ircfspace](https://github.com/MrPooyaX)
-- [@hossein-mohseni](https://github.com/hossein-mohseni)
-- [@mahdibland](https://github.com/mahdibland)
-- [@MrPooyaX](https://github.com/MrPooyaX)
-- [@ALIILAPRO](https://github.com/ALIILAPRO)
-- [@soroushmirzaei](https://github.com/soroushmirzaei)
-
-## 📞 Contact
-For any questions or issues, please open an issue in the repository.
+## Special Thanks To
+[@barry-far](https://github.com/barry-far)
+[@ircfspace](https://github.com/MrPooyaX)
+[@hossein-mohseni](https://github.com/hossein-mohseni)
+[@mahdibland](https://github.com/mahdibland)
+[@MrPooyaX](https://github.com/MrPooyaX)
+[@ALIILAPRO](https://github.com/ALIILAPRO)
+[@soroushmirzaei](https://github.com/soroushmirzaei)
