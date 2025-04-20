@@ -9,7 +9,6 @@ warp_fixed_text = """#profile-title: base64:8J+GkyBCYXJyeS1mYXIgfCBXYXJwIPCfjJA=
 #subscription-userinfo: upload=29; download=12; total=10737418240000000; expire=2546249531
 #support-url: https://github.com/barry-far/V2ray-Configs
 #profile-web-page-url: https://github.com/barry-far/V2ray-Configs
-
 """
 
 def decode_base64(encoded):
