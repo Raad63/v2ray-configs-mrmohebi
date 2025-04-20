@@ -2,7 +2,7 @@ import base64
 
 from contents.content_manager import ContentManager
 from settings.setting import SETTINGS
-from src.utils.utils import *
+from utils.utils import *
 
 
 def update_v2ray():
