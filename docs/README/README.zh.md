@@ -68,16 +68,16 @@ https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions
 - [Hiddify-Next](https://github.com/hiddify/hiddify-next)
 - [Nekoray](https://github.com/MatsuriDayo/nekoray)
 
-## 贡献
-✍️ 如果您有 V2ray 配置文件并希望贡献到此仓库，只需创建一个新的 Pull Request，我们会进行审核。
+## ✍️ 贡献
+如果您有 V2ray 配置文件并希望贡献到此仓库，只需创建一个新的 Pull Request，我们会进行审核。
 
-## 许可证
-📝 本仓库采用 MIT 许可证。更多信息请参阅 [LICENSE](https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/LICENSE)。
+## 📝 许可证
+本仓库采用 MIT 许可证。更多信息请参阅 [LICENSE](https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/LICENSE)。
 
-## 联系我们
-🙋‍♀️ 如有任何问题或建议，请通过讨论区与我们联系。
+## 🙋‍♀️ 联系我们
+如有任何问题或建议，请通过讨论区与我们联系。
 
-## 特别感谢
+## 🤍 特别感谢
 [@barry-far](https://github.com/barry-far)
 [@ircfspace](https://github.com/MrPooyaX)
 [@hossein-mohseni](https://github.com/hossein-mohseni)

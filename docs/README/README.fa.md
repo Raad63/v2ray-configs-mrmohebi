@@ -66,16 +66,16 @@ https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions
 - [Hiddify-Next](https://github.com/hiddify/hiddify-next)
 - [Nekoray](https://github.com/MatsuriDayo/nekoray)
 
-## مشارکت
-✍️ اگر فایل پیکربندی V2ray دارید که می‌خواهید به این مخزن اضافه کنید، یک Pull Request جدید ایجاد کنید تا بررسی شود.
+## ✍️ مشارکت
+اگر فایل پیکربندی V2ray دارید که می‌خواهید به این مخزن اضافه کنید، یک Pull Request جدید ایجاد کنید تا بررسی شود.
 
-## مجوز
-📝 این مخزن تحت مجوز MIT منتشر شده است. برای اطلاعات بیشتر [LICENSE](https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/LICENSE) را ببینید.
+## 📝 مجوز
+این مخزن تحت مجوز MIT منتشر شده است. برای اطلاعات بیشتر [LICENSE](https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/LICENSE) را ببینید.
 
-## تماس با ما
-🙋‍♀️ اگر سوال یا نظری دارید، از طریق بخش بحث‌ها با ما در تماس باشید.
+## 🙋‍♀️ تماس با ما
+اگر سوال یا نظری دارید، از طریق بخش بحث‌ها با ما در تماس باشید.
 
-## تشکر ویژه از
+## 🤍 تشکر ویژه از
 [@barry-far](https://github.com/barry-far)
 [@ircfspace](https://github.com/MrPooyaX)
 [@hossein-mohseni](https://github.com/hossein-mohseni)

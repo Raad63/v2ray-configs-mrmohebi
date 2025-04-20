@@ -67,16 +67,16 @@ https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions
 - [Hiddify-Next](https://github.com/hiddify/hiddify-next)
 - [Nekoray](https://github.com/MatsuriDayo/nekoray)
 
-## Contributing
-✍️ If you have a V2ray configuration file that you would like to contribute to this repository, simply create a new pull request and we will review it.
+## ✍️ Contributing
+If you have a V2ray configuration file that you would like to contribute to this repository, simply create a new pull request and we will review it.
 
-## License
-📝 This repository is licensed under the MIT license. See [LICENSE](https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/LICENSE) for more information.
+## 📝 License
+This repository is licensed under the MIT license. See [LICENSE](https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/LICENSE) for more information.
 
-## Contact
-🙋‍♀️ If you have any questions or concerns, please feel free to reach out to us via our discussions tracker.
+## 🙋‍♀️ Contact
+If you have any questions or concerns, please feel free to reach out to us via our discussions tracker.
 
-## Special Thanks To
+## 🤍 Special Thanks To
 [@barry-far](https://github.com/barry-far)
 [@ircfspace](https://github.com/MrPooyaX)
 [@hossein-mohseni](https://github.com/hossein-mohseni)
