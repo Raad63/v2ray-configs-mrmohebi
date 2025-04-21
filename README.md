@@ -8,7 +8,7 @@
 
 ## ✨ Key Features
 - Multi-protocol compatibility (VMess, VLESS, Trojan, Shadowsocks, SSR, TUIC, Hysteria2, Warp)
-- Auto-updating configurations every **10 minutes**
+- Auto-updating configurations every **15 minutes**
 - Organized by protocol type
 - Base64 encoded for convenience
 - Frequently refreshed sources
