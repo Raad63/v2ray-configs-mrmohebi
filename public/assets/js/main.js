@@ -4,5 +4,28 @@ get_configs();
 get_contributors();
 
 refresh_btn.addEventListener("click", function () {
+    refresh_i.classList.add("bx-spin");
     get_configs(isBase64=false);
-  });
+    setTimeout(() => { refresh_i.classList.remove("bx-spin") }, 1000);
+});
+
+show_all?.addEventListener("click", function () {
+  if (show_all.innerHTML.trim() ===  `<i class="bx bx-up-arrow-alt bx-fade-up"></i>&nbsp;&nbsp;Show
+              Less&nbsp;&nbsp;<i class="bx bx-up-arrow-alt bx-fade-up"></i>`) {
+    get_configs(false);
+    show_all.innerHTML = `
+    <i class="bx bx-down-arrow-alt bx-fade-down"></i>&nbsp;&nbsp;Show
+              All&nbsp;&nbsp;<i
+                class="bx bx-down-arrow-alt bx-fade-down"
+              ></i>
+    `;
+  } else {
+    show_all_configs();
+    show_all.innerHTML = `
+    <i class="bx bx-up-arrow-alt bx-fade-up"></i>&nbsp;&nbsp;Show
+              Less&nbsp;&nbsp;<i
+                class="bx bx-up-arrow-alt bx-fade-up"
+              ></i>
+    `;
+  }
+});

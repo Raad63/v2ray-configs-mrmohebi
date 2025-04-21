@@ -186,7 +186,9 @@ const sideMenu = document.querySelector("aside");
 const menuBtn = document.querySelector("#menu-btn");
 const closeBtn = document.querySelector("#close-btn");
 const refresh_btn = document.querySelector("#refresh-list");
+const refresh_i = document.querySelector("#refresh-i");
 const show_all = document.querySelector("#show_all");
+const scroll_bottom = document.querySelector("#scroll-to-bottom");
 
 //show sidebar
 menuBtn.addEventListener("click", function () {
@@ -199,12 +201,9 @@ closeBtn.addEventListener("click", function () {
   sideMenu.style.display = "none";
 });
 
-show_all?.addEventListener("click", function () {
-  if (show_all.textContent === "Show Less") {
-    get_configs();
-    show_all.textContent = "Show All";
-  } else {
-    show_all_configs();
-    show_all.textContent = "Show Less";
-  }
+scroll_bottom.addEventListener("click", function () {
+  window.scrollTo({
+    top: document.body.scrollHeight,
+    behavior: 'smooth'
+  });
 });
