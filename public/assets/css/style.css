@@ -543,10 +543,11 @@ main .recent-order a{
     aside .sidebar a{
         width: 5.6rem;
     }
-    aside .sidebar a:last-child{
+    
+    /* aside .sidebar a:last-child{
         position: relative;
         margin-top: 1.8rem;
-    }
+    } */
 
     /* MAIN SECTION */
     main .insights{
@@ -568,13 +569,13 @@ main .recent-order a{
         width: 83vw;
     }
 
-    main table thead tr th:last-child, 
+    /* main table thead tr th:last-child,  */
     main table thead tr th:first-child{
         display: none;
     }
     
-    main table tbody tr th:last-child, 
-    main table tbody tr th:first-child{
+    /* main table tbody tr td:last-child,  */
+    main table tbody tr td:first-child{
         display: none;
     }
 
@@ -622,10 +623,10 @@ main .recent-order a{
     height: 3.4rem;
    }
 
-   aside .sidebar a:last-child{
+   /* aside .sidebar a:last-child{
     position: absolute;
     bottom: 5rem;
-   }
+   } */
    aside .close{
     display: inline-block;
     cursor: pointer;
@@ -709,6 +710,7 @@ main .recent-order a{
 
 .textToCopy:hover{
     cursor: pointer;
+    text-wrap: pretty;
 }
 
 .clickable:hover{

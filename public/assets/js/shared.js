@@ -2,14 +2,14 @@ contributors_url = "https://raw.githubusercontent.com/MatinGhanbari/v2ray-config
 
 configLines = [];
 
-function copyText(text){
+function copyText(text) {
   const textarea = document.createElement('textarea');
   textarea.value = text;
 
   document.body.appendChild(textarea);
   textarea.select();
   textarea.setSelectionRange(0, 99999);
-  
+
   document.execCommand('copy');
   document.body.removeChild(textarea);
   alert(`Text copied to clipboard!`);
@@ -24,115 +24,139 @@ function shuffle(array) {
   }
 }
 
-function show_all_configs(){
+function hash(string, len=8) {
+  return string.split('').reduce((hash, char) => {
+    return char.charCodeAt(0) + (hash << 6) + (hash << 16) - hash;
+}, 0).toString().substring(1, len+1);
+}
+
+// Function to check if device is mobile
+function isMobileDevice() {
+  return (window.innerWidth<=640);
+}
+
+function show_all_configs() {
   const tbody = document.querySelector('tbody');
+  const isMobile = isMobileDevice();  
 
   while (tbody.firstChild) {
-      tbody.removeChild(tbody.firstChild);
+    tbody.removeChild(tbody.firstChild);
   }
 
   configLines.forEach((proxyLink, index) => {
-      if (!proxyLink.trim()) return;
-      if (proxyLink.indexOf("#") === 0) return;
+    if (!proxyLink.trim()) return;
+    if (proxyLink.indexOf("#") === 0) return;
 
-      let link = proxyLink;
-      const lengthLimit = 50;
-      const protocol = proxyLink.substring(0, proxyLink.indexOf(":"));
-      const length = proxyLink.length;
-      if(length>lengthLimit){link = proxyLink.substring(0,lengthLimit)+"...";}
+    let link = proxyLink;
+    const lengthLimit = isMobile ? 5 : 50; // Shorter limit for mobile
+    const protocol = proxyLink.substring(0, proxyLink.indexOf(":"));
+    const length = proxyLink.length;
+    if (length > lengthLimit) {
+      if(isMobile){
+        link= hash(proxyLink, 8);
+      }else{
+        link = proxyLink.substring(0, lengthLimit) + "...";
+      }
+    }
 
-      const tr = document.createElement("tr");
-      const trContent =   `
+    const tr = document.createElement("tr");
+    const trContent = `
                   <td>${index}</td>
                   <td>${protocol}</td>
                   <td>${link}</td>
                   <td class="success">Active</td>
                   <td class="primary clickable" onClick="copyText('${proxyLink}')">Copy</td>
       `
-      tr.innerHTML = trContent;
-      document.querySelector('table tbody').appendChild(tr);
-    });
+    tr.innerHTML = trContent;
+    document.querySelector('table tbody').appendChild(tr);
+  });
 }
 
-function get_configs(isBase64=false){
+function get_configs(isBase64 = false) {
   const tbody = document.querySelector('tbody');
+  const isMobile = isMobileDevice();
 
   while (tbody.firstChild) {
-      tbody.removeChild(tbody.firstChild);
+    tbody.removeChild(tbody.firstChild);
   }
 
   fetch(sub_url)
-  .then((response) => response.text())
-  .then((text) => {
-    let lines="";
-    if (isBase64){ 
-      lines = atob(text).split("\n");
-    }else{
-      lines = text.split("\n");
-    }
-
-    const table = document.getElementById("proxy-table");
-    lines = lines.slice(5, lines.length);
-    shuffle(lines);
-
-    configLines = lines;
-
-    lines = lines.slice(0, 10);
-    lines.forEach((proxyLink, index) => {
-      if (!proxyLink.trim()) return;
-      if (proxyLink.indexOf("#") === 0) return;
-
-      let link = proxyLink;
-      const lengthLimit = 50;
-      const protocol = proxyLink.substring(0, proxyLink.indexOf(":"));
-      const length = proxyLink.length;
-      if (length > lengthLimit){
-        link = proxyLink.substring(0,lengthLimit)+"...";
+    .then((response) => response.text())
+    .then((text) => {
+      let lines = "";
+      if (isBase64) {
+        lines = atob(text).split("\n");
+      } else {
+        lines = text.split("\n");
       }
 
-      const tr = document.createElement("tr");
-      const trContent =   `
+      const table = document.getElementById("proxy-table");
+      lines = lines.slice(5, lines.length);
+      shuffle(lines);
+
+      configLines = lines;
+
+      lines = lines.slice(0, 10);
+      lines.forEach((proxyLink, index) => {
+        if (!proxyLink.trim()) return;
+        if (proxyLink.indexOf("#") === 0) return;
+
+        let link = proxyLink;
+        const lengthLimit = isMobile ? 5 : 50; // Shorter limit for mobile
+        const protocol = proxyLink.substring(0, proxyLink.indexOf(":"));
+        const length = proxyLink.length;
+        if (length > lengthLimit) {
+          if(isMobile){
+            link= hash(proxyLink, 8);
+          }else{
+            link = proxyLink.substring(0, lengthLimit) + "...";
+          }
+        }
+
+        const tr = document.createElement("tr");
+        const trContent = `
                   <td>${index}</td>
                   <td>${protocol}</td>
                   <td>${link}</td>
                   <td class="success">Active</td>
                   <td class="primary clickable" onClick="copyText('${proxyLink}')">Copy</td>
       `
-      tr.innerHTML = trContent;
-      document.querySelector('table tbody').appendChild(tr);
-    });
-
-    document.querySelectorAll(".link-preview").forEach((linkPreview) => {
-      linkPreview.addEventListener("click", () => {
-        const linkToCopy = linkPreview.getAttribute("data-link");
-        copyToClipboard(linkToCopy);
+        tr.innerHTML = trContent;
+        document.querySelector('table tbody').appendChild(tr);
       });
-    });
 
-    function copyToClipboard(text) {
-      const textarea = document.createElement("textarea");
-      textarea.value = text;
-      document.body.appendChild(textarea);
-      textarea.select();
-      document.execCommand("copy");
-      document.body.removeChild(textarea);
-      alert(`Copied to clipboard: ${text}`);
-    }
-  })
-  .catch((error) => console.error(error));
+      document.querySelectorAll(".link-preview").forEach((linkPreview) => {
+        linkPreview.addEventListener("click", () => {
+          const linkToCopy = linkPreview.getAttribute("data-link");
+          copyToClipboard(linkToCopy);
+        });
+      });
+
+      function copyToClipboard(text) {
+        const textarea = document.createElement("textarea");
+        textarea.value = text;
+        document.body.appendChild(textarea);
+        textarea.select();
+        document.execCommand("copy");
+        document.body.removeChild(textarea);
+        alert(`Copied to clipboard: ${text}`);
+      }
+    })
+    .catch((error) => console.error(error));
 }
 
-function get_contributors(){
+// Rest of the code remains the same...
+function get_contributors() {
   const contributors = document.querySelector('#contributors');
   var x = "";
   fetch(contributors_url)
-  .then((response) => response.json())
-  .then((data) => {
-    contrib_list = data;
-    if(contrib_list.length>3){
-      contrib_list = data.slice(0,3);
-    }
-    data.forEach((contributor, index) => {
+    .then((response) => response.json())
+    .then((data) => {
+      contrib_list = data;
+      if (contrib_list.length > 3) {
+        contrib_list = data.slice(0, 3);
+      }
+      data.forEach((contributor, index) => {
         x += `
         <div class="item online">
           <a href="${contributor.html_url}" target="_blank">
@@ -150,11 +174,11 @@ function get_contributors(){
           </div>
         </div>
         `;
-    });
+      });
 
-    contributors.innerHTML = x;
-  })
-  .catch((error) => console.error(error));
+      contributors.innerHTML = x;
+    })
+    .catch((error) => console.error(error));
 }
 
 //SIDE BAR FUNCTION
@@ -164,26 +188,23 @@ const closeBtn = document.querySelector("#close-btn");
 const refresh_btn = document.querySelector("#refresh-list");
 const show_all = document.querySelector("#show_all");
 
-refresh_btn.addEventListener("click", function(){
-    get_configs();
-});
-
-show_all.addEventListener("click", function(){
-    if(show_all.textContent === "Show Less"){
-        get_configs();
-        show_all.textContent = "Show All";
-    }else{
-        show_all_configs();
-        show_all.textContent = "Show Less";
-    }
-});
-
 //show sidebar
-menuBtn.addEventListener("click", function(){
-    sideMenu.style.display = "block";
+menuBtn.addEventListener("click", function () {
+  console.log("here");
+  sideMenu.style.display = "block";
 });
 
 //hide sidebar
-closeBtn.addEventListener("click", function(){
-    sideMenu.style.display = "none";
+closeBtn.addEventListener("click", function () {
+  sideMenu.style.display = "none";
+});
+
+show_all?.addEventListener("click", function () {
+  if (show_all.textContent === "Show Less") {
+    get_configs();
+    show_all.textContent = "Show All";
+  } else {
+    show_all_configs();
+    show_all.textContent = "Show Less";
+  }
 });
