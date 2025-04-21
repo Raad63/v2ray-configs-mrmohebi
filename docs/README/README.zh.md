@@ -8,7 +8,7 @@
 
 ## ✨ 主要特性
 - 多协议兼容 (VMess, VLESS, Trojan, Shadowsocks, SSR, TUIC, Hysteria2, Warp)
-- 每 **10 分钟** 自动更新配置
+- 每 **15 分钟** 自动更新配置
 - 按协议类型分类
 - 使用 Base64 编码，方便使用
 - 定期更新来源
