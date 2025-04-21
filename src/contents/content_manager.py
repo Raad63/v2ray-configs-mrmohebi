@@ -3,19 +3,19 @@ import base64
 
 class ContentManager:
     def __init__(self):
-        self.default_v2ray_title = "8J+GkyBHaXRIdWIgLSBNYXRpbkdoYW5iYXJpIPCfg48="
-        self.default_v2ray_sub_title = "8J+GkyBHaXRIdWI6TWF0aW5HaGFuYWJyaSB8IFN1Yg=="
+        self.default_v2ray_title = "8J+GkyB2MnJheS1jb25maWdzIHwgYWxsIHwgYjJuLmlyL3YycmF5LWNvbmYg8J+mlQ=="
+        self.default_v2ray_sub_title = "4pu177iPIGIybi5pci92MnJheS1jb25mIHwgc3Vi"
 
-        self.default_warp_title = "8J+GkyBHaXRIdWI6TWF0aW5HaGFuYmFyaSB8IFdhcnAg8J+MkA=="
+        self.default_warp_title = "8J+XvSBiMm4uaXIvdjJyYXktY29uZiB8IHdhcnAg8J+MsQ=="
 
         self.filter_titles = {
-            "vmess": "8J+GkyBHaXRIdWI6TWF0aW5HaGFuYmFyaSB8IHZtZXNzIPCfkb0=",
-            "vless": "8J+GkyBHaXRIdWI6TWF0aW5HaGFuYmFyaSB8IHZsZXNzIPCfkb0=",
-            "trojan": "8J+GkyBHaXRIdWI6TWF0aW5HaGFuYmFyaSB8IHRyb2phbiDwn5G9",
-            "ss": "8J+GkyBHaXRIdWI6TWF0aW5HaGFuYmFyaSB8IHNzIPCfkb0=",
-            "ssr": "8J+GkyBHaXRIdWI6TWF0aW5HaGFuYmFyaSB8IHNzciDwn5G9",
-            "tuic": "8J+GkyBHaXRIdWI6TWF0aW5HaGFuYmFyaSB8IHR1aWMg8J+RvQ==",
-            "hy2": "8J+GkyBHaXRIdWI6TWF0aW5HaGFuYmFyaSB8IGh5MiDwn5G9"
+            "vmess": "8J+QiCBiMm4uaXIvdjJyYXktY29uZiB8IHZtZXNzIPCfmI8=",
+            "vless": "8J+mlSBiMm4uaXIvdjJyYXktY29uZiB8IHZsZXNzIPCfmI8=",
+            "trojan": "8J+QjiBiMm4uaXIvdjJyYXktY29uZiB8IHRyb2phbiDwn5iP",
+            "ss": "8J+QhSBiMm4uaXIvdjJyYXktY29uZiB8IHNzIPCfmI8=",
+            "ssr": "8J+QhSBiMm4uaXIvdjJyYXktY29uZiB8IHNzciDwn5iP",
+            "tuic": "8J+QsyBiMm4uaXIvdjJyYXktY29uZiB8IHR1aWMg8J+Yjw==",
+            "hy2": "8J+mniBiMm4uaXIvdjJyYXktY29uZiB8IGh5MiDwn5iP"
         }
 
     @staticmethod
