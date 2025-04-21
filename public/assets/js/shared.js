@@ -32,7 +32,7 @@ function hash(string, len=8) {
 
 // Function to check if device is mobile
 function isMobileDevice() {
-  return (window.innerWidth<=640);
+  return (window.innerWidth<=768);
 }
 
 function show_all_configs() {
@@ -48,7 +48,7 @@ function show_all_configs() {
     if (proxyLink.indexOf("#") === 0) return;
 
     let link = proxyLink;
-    const lengthLimit = isMobile ? 5 : 50; // Shorter limit for mobile
+    const lengthLimit = 50; // Shorter limit for mobile
     const protocol = proxyLink.substring(0, proxyLink.indexOf(":"));
     const length = proxyLink.length;
     if (length > lengthLimit) {
@@ -102,7 +102,7 @@ function get_configs(isBase64 = false) {
         if (proxyLink.indexOf("#") === 0) return;
 
         let link = proxyLink;
-        const lengthLimit = isMobile ? 5 : 50; // Shorter limit for mobile
+        const lengthLimit = 50; // Shorter limit for mobile
         const protocol = proxyLink.substring(0, proxyLink.indexOf(":"));
         const length = proxyLink.length;
         if (length > lengthLimit) {
