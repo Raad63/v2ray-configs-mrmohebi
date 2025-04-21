@@ -43,7 +43,7 @@ jobs:
         with:
           commit_message: "🔄 Auto-update configs (10 min interval)"
           branch: main
-          file_pattern: "subscriptions/*"
+          file_pattern: "subscriptions/* public/assets/data/*"
           commit_user_name: GitHub Actions
           commit_user_email: actions@github.com
           commit_author: GitHub Actions <actions@github.com>
