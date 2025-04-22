@@ -19,7 +19,7 @@
         "type": "User",
         "user_view_type": "public",
         "site_admin": false,
-        "contributions": 125
+        "contributions": 120
     },
     {
         "login": "actions-user",
@@ -41,6 +41,6 @@
         "type": "User",
         "user_view_type": "public",
         "site_admin": false,
-        "contributions": 90
+        "contributions": 86
     }
 ]
