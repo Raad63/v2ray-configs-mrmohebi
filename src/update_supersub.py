@@ -71,12 +71,14 @@ class V2RayPingTester:
     def test_all(self):
         results = []
         with ThreadPoolExecutor(max_workers=self.max_threads) as executor:
-            futures = [executor.submit(self.test_single, config) for config in self.configs]
+            futures = [executor.submit(self.test_single, config) for config in self.configs[:100]]
             for future in as_completed(futures):
                 result = future.result()
                 if result['status'] == 'reachable' and result['ping'] != None:
                     results.append(result)
-        return results
+
+        sorted_results = sorted(results, key=lambda x: x['ping'] if x['ping'] is not None else float('inf'))
+        return sorted_results
 
 
 def make_super_sub():
@@ -87,10 +89,8 @@ def make_super_sub():
     out_dir = SETTINGS['out_dir']
     sub_links = [
         # f"{raw_repo}/{out_dir}/filtered/subs/vmess.txt",
-        f"{raw_repo}/{out_dir}/v2ray/subs/sub1.txt",
-        f"{raw_repo}/{out_dir}/v2ray/subs/sub2.txt"
+        f"{raw_repo}/{out_dir}/filtered/subs/vless.txt"
     ]
-    print(sub_links)
     
     configs = []
     for url in sub_links:
