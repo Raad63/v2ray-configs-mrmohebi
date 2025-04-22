@@ -6,6 +6,7 @@ on:
     branches:
       - main
   schedule:
+    # At every 15th minute.
     - cron: "*/15 * * * *"
 
 jobs:
