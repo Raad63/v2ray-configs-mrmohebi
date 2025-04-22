@@ -8,6 +8,10 @@ import random
 
 TIMEOUT = SETTINGS['timeout']
 
+def shuffle_configs(configs, n=1):
+    for _ in range(n):
+        random.shuffle(configs)
+    return configs
 
 def decode_files_links(links):
     decoded_data = []

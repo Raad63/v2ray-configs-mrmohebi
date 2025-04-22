@@ -3,7 +3,6 @@ import base64
 from contents.content_manager import ContentManager
 from settings.setting import SETTINGS
 from utils.utils import *
-import random
 
 def update_v2ray():
     content_manager = ContentManager()
@@ -11,14 +10,14 @@ def update_v2ray():
 
     combined_data = decode_files_links(SETTINGS['sources']['files']) + decode_dirs_links(SETTINGS['sources']['dirs'])
     merged_configs = filter_for_protocols(combined_data, SETTINGS['protocols'])
-    random.shuffle(merged_configs)
+    shuffled_configs = shuffle_configs(merged_configs)
 
     output_filename = os.path.join(output_folder, "all_sub.txt")
     base64_filename = os.path.join(base64_folder, "all_sub.txt")
 
     with open(output_filename, "w+", encoding="utf-8") as f:
         f.write(content_manager.get_v2ray())
-        for config in merged_configs:
+        for config in shuffled_configs:
             f.write(config + "\n")
 
     with open(output_filename, "r+", encoding="utf-8") as f:
