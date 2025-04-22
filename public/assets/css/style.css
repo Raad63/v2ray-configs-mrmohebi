@@ -817,3 +817,19 @@ main .recent-order a{
     cursor: pointer;
     color: var(--color-primary-hover);
 }
+
+.bx-flashing-v2{
+    animation: bx-flashing-v2-animation 2s infinite normal;
+}
+
+@keyframes bx-flashing-v2-animation {
+    0% {
+        opacity: 1;
+      }
+      45%{
+        opacity: 0.5;
+      }
+      90% {
+        opacity: 1;
+      }
+}

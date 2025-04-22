@@ -64,7 +64,7 @@ function show_all_configs() {
                   <td>${index}</td>
                   <td>${protocol}</td>
                   <td>${link}</td>
-                  <td class="success">Active</td>
+                  <td class="success bx-flashing-v2">Active</td>
                   <td class="primary clickable" onClick="copyText('${proxyLink}')">Copy</td>
       `
     tr.innerHTML = trContent;
@@ -118,7 +118,7 @@ function get_configs(isBase64 = false) {
                   <td>${index}</td>
                   <td>${protocol}</td>
                   <td>${link}</td>
-                  <td class="success">Active</td>
+                  <td class="success bx-flashing-v2">Active</td>
                   <td class="primary clickable" onClick="copyText('${proxyLink}')">Copy</td>
       `
         tr.innerHTML = trContent;
