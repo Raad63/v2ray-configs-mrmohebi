@@ -51,7 +51,7 @@ def filter_for_protocols(data, protocols):
         for line in datum.split("\n"):
             if any(protocol in line for protocol in protocols):
                 if line.count('#') == 1:
-                    line = line[:line.index('#') + 1] + SETTINGS['tag'] + str(round((random.random())*100000))
+                    line = line[:line.index('#') + 1] + SETTINGS['tag'] + str(round((random.random())*1000))
                 filtered_data.append(line)
     return filtered_data
 
