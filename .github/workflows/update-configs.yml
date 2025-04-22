@@ -53,10 +53,10 @@ jobs:
       - name: Commit and push files
         uses: EndBug/add-and-commit@v7
         with:
-          author_name: "Github Actions"
-          author_email: "actions@github.com"
-          message: "Updated 2 minutes Ago ⚡️"
-          add: "."
           push: "https://github.com/MatinGhanbari/v2ray-configs.git"
+          message: "Update configs (15 minutes interval)"
+          author_email: "actions@github.com"
+          author_name: "Github Actions"
+          add: "subscriptions public"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
