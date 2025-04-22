@@ -1,10 +1,12 @@
-# 🔓 Open V2ray Configurations For All
-🖥️ Community-maintained repository offering free V2ray configs to help you browse securely and privately.
+# ♾️ Free V2ray Configurations For All
+[![Stars](https://img.shields.io/github/stars/MatinGhanbari/v2ray-configs?style=flat-square)](https://github.com/MatinGhanbari/v2ray-configs/stargazers)
+![Last Updated](https://img.shields.io/github/last-commit/MatinGhanbari/v2ray-configs?style=flat-square) [![MIT](https://img.shields.io/badge/license-MIT-green?style=flat-square)](https://lbesson.mit-license.org/) ![Size](https://img.shields.io/github/repo-size/MatinGhanbari/v2ray-configs?style=flat-square)
 
 [فارسی](https://github.com/MatinGhanbari/v2ray-configs/blob/main/docs/README/README.fa.md) | [中文](https://github.com/MatinGhanbari/v2ray-configs/blob/main/docs/README/README.zh.md)
 
-[![Stars](https://img.shields.io/github/stars/MatinGhanbari/v2ray-configs?style=flat-square)](https://github.com/MatinGhanbari/v2ray-configs/stargazers)
-![Last Updated](https://img.shields.io/github/last-commit/MatinGhanbari/v2ray-configs?style=flat-square) [![MIT](https://img.shields.io/badge/license-MIT-green?style=flat-square)](https://lbesson.mit-license.org/) ![Size](https://img.shields.io/github/repo-size/MatinGhanbari/v2ray-configs?style=flat-square)
+---------
+
+🧩 Community-maintained repository offering free V2ray configs to help you browse securely and privately.
 
 ## ✨ Key Features
 - Multi-protocol compatibility (VMess, VLESS, Trojan, Shadowsocks, SSR, TUIC, Hysteria2, Warp)
@@ -68,7 +70,7 @@ https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions
 https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/filtered/subs/hy2.txt
 ```
 
-## 📲 Client Configuration
+## 📱 V2ray Clients
 - [Hiddify-Next](https://github.com/hiddify/hiddify-next)
 - [Nekoray](https://github.com/MatsuriDayo/nekoray)
 
