@@ -6,7 +6,7 @@ on:
     branches:
       - main
   schedule:
-    - cron: "0 */1 * * *"
+    - cron: "0/15 * * * *"
 
 jobs:
   update-configs:
@@ -36,16 +36,27 @@ jobs:
       - name: Update contributors
         run: python src/update_contributors.py
 
-      - name: Commit Files
-        run: |
-          git config --local user.email "ghanbarimatin6@gmail.com"
-          git config --local user.name "Matin Ghanbari"
-          git add subscriptions
-          git add public
-          git commit -m "Updated $(TZ='Asia/Tehran' date '+%Y-%m-%d %H:%M %Z')"
+      # - name: Commit Files
+      #   run: |
+      #     git config --local user.email "ghanbarimatin6@gmail.com"
+      #     git config --local user.name "Matin Ghanbari"
+      #     git add subscriptions
+      #     git add public
+      #     git commit -m "Updated $(TZ='Asia/Tehran' date '+%Y-%m-%d %H:%M %Z')"
 
-      - name: Push Changes
-        uses: ad-m/github-push-action@v0.6.0
+      # - name: Push Changes
+      #   uses: ad-m/github-push-action@v0.6.0
+      #   with:
+      #     github_token: ${{ secrets.GITHUB_TOKEN }}
+      #     branch: main
+
+      - name: Commit and push files
+        uses: EndBug/add-and-commit@v7
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: main
+          author_name: "Github Actions"
+          author_email: "actions@github.com"
+          message: "Updated 2 minutes Ago ⚡️"
+          add: "."
+          push: "https://github.com/MatinGhanbari/v2ray-configs.git"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
