@@ -91,7 +91,8 @@ def make_super_sub():
         f"{raw_repo}/{out_dir}/filtered/subs/vmess.txt",
         f"{raw_repo}/{out_dir}/filtered/subs/vless.txt"
     ]
-    
+    print(sub_links)
+
     configs = []
     for url in sub_links:
         response = requests.get(url).text
@@ -101,11 +102,10 @@ def make_super_sub():
 
         tester = V2RayPingTester(configs)
         results = tester.test_all()
-        for res in results:
+        for res in results[:100]:
             configs.append(res['config'])
 
     # shuffled_configs = shuffle_configs(configs, 5)
-
     # data = content_manager.get_v2ray_supersub() + "\n".join(shuffled_configs)
     data = content_manager.get_v2ray_supersub() + "\n".join(configs)
 

@@ -64,11 +64,12 @@ function show_all_configs() {
                   <td>${index}</td>
                   <td>${protocol}</td>
                   <td>${link}</td>
-                  <td class="success bx-flashing-v2">Active</td>
+                  <td class="warning bx-flashing-v2" id="conf${index}"> --- </td>
                   <td class="primary clickable" onClick="copyText('${proxyLink}')">Copy</td>
       `
     tr.innerHTML = trContent;
     document.querySelector('table tbody').appendChild(tr);
+    tester.updateConfigPing(proxyLink, index);
   });
 }
 
@@ -118,11 +119,12 @@ function get_configs(isBase64 = false) {
                   <td>${index}</td>
                   <td>${protocol}</td>
                   <td>${link}</td>
-                  <td class="success bx-flashing-v2">Active</td>
+                  <td class="warning bx-flashing-v2" id="conf${index}"> --- </td>
                   <td class="primary clickable" onClick="copyText('${proxyLink}')">Copy</td>
       `
         tr.innerHTML = trContent;
         document.querySelector('table tbody').appendChild(tr);
+        tester.updateConfigPing(proxyLink, index);
       });
 
       document.querySelectorAll(".link-preview").forEach((linkPreview) => {
@@ -192,7 +194,6 @@ const scroll_bottom = document.querySelector("#scroll-to-bottom");
 
 //show sidebar
 menuBtn.addEventListener("click", function () {
-  console.log("here");
   sideMenu.style.display = "block";
 });
 
