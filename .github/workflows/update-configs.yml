@@ -6,8 +6,8 @@ on:
     branches:
       - main
   schedule:
-    # At every 15th minute.
-    - cron: "*/15 * * * *"
+    # At every 30th minute.
+    - cron: "*/30 * * * *"
 
 jobs:
   update-configs:
@@ -35,6 +35,12 @@ jobs:
       - name: Filter sub files
         run: python src/filter_subs.py
 
+      - name: Update SuperSub
+        run: python src/update_supersub.py
+
+      - name: Update contributors
+        run: python src/update_contributors.py
+
       # - name: Commit Files
       #   run: |
       #     git config --local user.email "ghanbarimatin6@gmail.com"
@@ -53,7 +59,7 @@ jobs:
         uses: EndBug/add-and-commit@v7
         with:
           push: "https://github.com/MatinGhanbari/v2ray-configs.git"
-          message: "Update v2ray configs (15 minutes interval)"
+          message: "Update v2ray configs"
           author_email: "actions@github.com"
           author_name: "Github Actions"
           add: "subscriptions"
