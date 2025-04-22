@@ -36,6 +36,9 @@ jobs:
       - name: Update contributors
         run: python src/update_contributors.py
 
+      - name: Update SuperSub
+        run: python src/update_supersub.py
+
       # - name: Commit Files
       #   run: |
       #     git config --local user.email "ghanbarimatin6@gmail.com"

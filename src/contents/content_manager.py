@@ -3,6 +3,8 @@ import base64
 
 class ContentManager:
     def __init__(self):
+        self.default_supersub_title = "4pm+77iPIGIybi5pci92MnJheS1jb25mIHwgU3VwZXJTdWI="
+
         self.default_v2ray_title = "8J+GkyBiMm4uaXIvdjJyYXktY29uZiB8IGFsbCDwn6aV"
         self.default_v2ray_sub_title = "4pu177iPIGIybi5pci92MnJheS1jb25mIHwgc3Vi"
 
@@ -39,6 +41,10 @@ class ContentManager:
     def get_v2ray(self, title: str = None) -> str:
         return self.__get_file(f'src/contents/fixed-v2ray',
                                title, self.default_v2ray_title)
+    
+    def get_v2ray_supersub(self, title: str = None) -> str:
+        return self.__get_file(f'src/contents/fixed-v2ray-supersub',
+                               title, self.default_supersub_title)
 
     def get_v2ray_sub(self, sub_id: int) -> str:
         title = str(base64.b64decode(self.default_v2ray_sub_title).decode() + str(sub_id))

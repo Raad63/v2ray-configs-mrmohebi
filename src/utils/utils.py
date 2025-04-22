@@ -8,7 +8,7 @@ import random
 
 TIMEOUT = SETTINGS['timeout']
 
-def shuffle_configs(configs, n=1):
+def shuffle_configs(configs, n=2):
     for _ in range(n):
         random.shuffle(configs)
     return configs
