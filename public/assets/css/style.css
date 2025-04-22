@@ -833,3 +833,8 @@ main .recent-order a{
         opacity: 1;
       }
 }
+
+.typo-logo{
+    padding-left: 1rem;
+    color: var(--color-primary);
+}
