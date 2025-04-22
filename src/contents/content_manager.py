@@ -3,7 +3,7 @@ import base64
 
 class ContentManager:
     def __init__(self):
-        self.default_v2ray_title = "8J+GkyB2MnJheS1jb25maWdzIHwgYWxsIHwgYjJuLmlyL3YycmF5LWNvbmYg8J+mlQ=="
+        self.default_v2ray_title = "8J+GkyBiMm4uaXIvdjJyYXktY29uZiB8IGFsbCDwn6aV"
         self.default_v2ray_sub_title = "4pu177iPIGIybi5pci92MnJheS1jb25mIHwgc3Vi"
 
         self.default_warp_title = "8J+XvSBiMm4uaXIvdjJyYXktY29uZiB8IHdhcnAg8J+MsQ=="
