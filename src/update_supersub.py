@@ -86,9 +86,11 @@ def make_super_sub():
     raw_repo = SETTINGS['raw_repo']
     out_dir = SETTINGS['out_dir']
     sub_links = [
-        f"{raw_repo}/{out_dir}/filtered/subs/vmess.txt",
-        f"{raw_repo}/{out_dir}/filtered/subs/vless.txt"
+        # f"{raw_repo}/{out_dir}/filtered/subs/vmess.txt",
+        f"{raw_repo}/{out_dir}/v2ray/subs/sub1.txt",
+        f"{raw_repo}/{out_dir}/v2ray/subs/sub2.txt"
     ]
+    print(sub_links)
     
     configs = []
     for url in sub_links:
