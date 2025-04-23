@@ -62,6 +62,6 @@ jobs:
           message: "Update v2ray configs"
           author_email: "actions@github.com"
           author_name: "Github Actions"
-          add: "subscriptions"
+          add: "subscriptions public"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
