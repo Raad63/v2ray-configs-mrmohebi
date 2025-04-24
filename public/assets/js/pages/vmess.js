@@ -29,3 +29,26 @@ show_all?.addEventListener("click", function () {
     `;
   }
 });
+
+const sub = document.querySelector('.sub');
+if(isMobileDevice()){
+  sub.innerHTML += `
+  <div class="sub-title">⚡</div>
+  <div
+    class="sub-link"
+    onclick="copyText('https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/v2ray/subs/vmess.txt')"
+  >
+    .../subscriptions/v2ray/subs/vmess.txt
+  </div>
+`;
+}else{
+  sub.innerHTML += `
+  <div class="sub-title">⚡ SubLink :</div>
+  <div
+    class="sub-link"
+    onclick="copyText('https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/v2ray/subs/vmess.txt')"
+  >
+    https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/v2ray/subs/vmess.txt
+  </div>
+`;
+}

@@ -374,6 +374,21 @@ main .recent-order table:hover{
     box-shadow: none;
 }
 
+/* TABLE2*/
+main .recent-order .sub{
+    background: var(--color-white);
+    width: 100%;
+    border-radius: var(--card-border-radius);
+    padding: 1rem;
+    text-align: center;
+    box-shadow: var(--box-shadow);
+    transition: all 300ms ease;
+}
+
+main .recent-order .sub:hover{
+    box-shadow: none;
+}
+
 main table tbody td{
     height: 2.8rem;
     border-bottom: 1px solid var(--color-light);
@@ -837,4 +852,30 @@ main .recent-order a{
 .typo-logo{
     padding-left: 1rem;
     color: var(--color-primary);
+}
+
+.sub{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.sub-title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 10%;
+}
+
+.sub-link{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+}
+
+.sub-link:hover{
+    color: rgb(131, 131, 255);
+    cursor: pointer;
 }

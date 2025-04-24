@@ -12,6 +12,7 @@ function copyText(text) {
 
   document.execCommand('copy');
   document.body.removeChild(textarea);
+  document.body.focus();
   alert(`Text copied to clipboard!`);
 }
 
