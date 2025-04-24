@@ -625,7 +625,7 @@ main .recent-order a{
 
    main .recent-order{
     position: relative;
-    margin: 3rem 0 0 0;
+    /* margin: 3rem 0 0 0; */
     width: 100%;
    }
 
@@ -754,7 +754,7 @@ main .recent-order a{
 
    main .recent-order{
     position: relative;
-    margin: 3rem 0 0 0;
+    /* margin: 3rem 0 0 0; */
     width: 100%;
    }
 
@@ -865,17 +865,21 @@ main .recent-order a{
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 10%;
+    width: 13%;
 }
 
 .sub-link{
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 90%;
+    width: 87%;
 }
 
 .sub-link:hover{
     color: rgb(131, 131, 255);
     cursor: pointer;
+}
+
+main .recent-order:nth-child(2){
+    margin-bottom: 0;
 }
