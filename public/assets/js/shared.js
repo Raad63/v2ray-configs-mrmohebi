@@ -40,6 +40,10 @@ function show_all_configs() {
   const tbody = document.querySelector('tbody');
   const isMobile = isMobileDevice();  
 
+  if(isMobile){
+    document.getElementsByTagName('th')[2].innerHTML = 'Config Hash';
+  }
+
   while (tbody.firstChild) {
     tbody.removeChild(tbody.firstChild);
   }
@@ -77,6 +81,10 @@ function show_all_configs() {
 function get_configs(isBase64 = false) {
   const tbody = document.querySelector('tbody');
   const isMobile = isMobileDevice();
+
+  if(isMobile){
+    document.getElementsByTagName('th')[2].innerHTML = 'Config Hash';
+  }
 
   while (tbody.firstChild) {
     tbody.removeChild(tbody.firstChild);
