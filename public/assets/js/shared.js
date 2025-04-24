@@ -147,19 +147,9 @@ function get_configs(isBase64 = false) {
       document.querySelectorAll(".link-preview").forEach((linkPreview) => {
         linkPreview.addEventListener("click", () => {
           const linkToCopy = linkPreview.getAttribute("data-link");
-          copyToClipboard(linkToCopy);
+          copyText(linkToCopy);
         });
       });
-
-      function copyToClipboard(text) {
-        const textarea = document.createElement("textarea");
-        textarea.value = text;
-        document.body.appendChild(textarea);
-        textarea.select();
-        document.execCommand("copy");
-        document.body.removeChild(textarea);
-        alert(`Copied to clipboard: ${text}`);
-      }
 
       document.querySelector(".total-count").innerHTML = `
         <div style="font-size: x-small; display: inline">(${configLines.length})</div>

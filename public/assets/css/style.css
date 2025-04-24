@@ -139,7 +139,6 @@ b {
 aside {
   height: 100vh;
   background: var(--color-background);
-  position: sticky;
 }
 
 aside .top {
@@ -149,6 +148,7 @@ aside .top {
   justify-content: space-between;
   margin-top: 1.4rem;
 }
+
 aside .logo {
   display: flex;
   gap: 0.8rem;
