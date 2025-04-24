@@ -152,6 +152,10 @@ function get_configs(isBase64 = false) {
         document.body.removeChild(textarea);
         alert(`Copied to clipboard: ${text}`);
       }
+
+      document.querySelector('.total-count').innerHTML = `
+        <div style="font-size: x-small; display: inline">(${configLines.length})</div>
+      `;
     })
     .catch((error) => console.error(error));
 }
