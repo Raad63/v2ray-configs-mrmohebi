@@ -1,16 +1,17 @@
-contributors_url = "https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/refs/heads/main/public/assets/data/contributors.json";
+contributors_url =
+  "https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/refs/heads/main/public/assets/data/contributors.json";
 
 configLines = [];
 
 function copyText(text) {
-  const textarea = document.createElement('textarea');
+  const textarea = document.createElement("textarea");
   textarea.value = text;
 
   document.body.appendChild(textarea);
   textarea.select();
   textarea.setSelectionRange(0, 99999);
 
-  document.execCommand('copy');
+  document.execCommand("copy");
   document.body.removeChild(textarea);
   document.body.focus();
   alert(`Text copied to clipboard!`);
@@ -21,27 +22,34 @@ function shuffle(array) {
   while (currentIndex != 0) {
     let randomIndex = Math.floor(Math.random() * currentIndex);
     currentIndex--;
-    [array[currentIndex], array[randomIndex]] = [array[randomIndex], array[currentIndex]];
+    [array[currentIndex], array[randomIndex]] = [
+      array[randomIndex],
+      array[currentIndex],
+    ];
   }
 }
 
-function hash(string, len=8) {
-  return string.split('').reduce((hash, char) => {
-    return char.charCodeAt(0) + (hash << 6) + (hash << 16) - hash;
-}, 0).toString().substring(1, len+1);
+function hash(string, len = 8) {
+  return string
+    .split("")
+    .reduce((hash, char) => {
+      return char.charCodeAt(0) + (hash << 6) + (hash << 16) - hash;
+    }, 0)
+    .toString()
+    .substring(1, len + 1);
 }
 
 // Function to check if device is mobile
 function isMobileDevice() {
-  return (window.innerWidth<=768);
+  return window.innerWidth <= 768;
 }
 
 function show_all_configs() {
-  const tbody = document.querySelector('tbody');
-  const isMobile = isMobileDevice();  
+  const tbody = document.querySelector("tbody");
+  const isMobile = isMobileDevice();
 
-  if(isMobile){
-    document.getElementsByTagName('th')[2].innerHTML = 'Config Hash';
+  if (isMobile) {
+    document.getElementsByTagName("th")[2].innerHTML = "Config Hash";
   }
 
   while (tbody.firstChild) {
@@ -57,9 +65,9 @@ function show_all_configs() {
     const protocol = proxyLink.substring(0, proxyLink.indexOf(":"));
     const length = proxyLink.length;
     if (length > lengthLimit) {
-      if(isMobile){
-        link= hash(proxyLink, 8);
-      }else{
+      if (isMobile) {
+        link = hash(proxyLink, 8);
+      } else {
         link = proxyLink.substring(0, lengthLimit) + "...";
       }
     }
@@ -71,19 +79,19 @@ function show_all_configs() {
                   <td>${link}</td>
                   <td class="warning bx-flashing-v2" id="conf${index}"> --- </td>
                   <td class="primary clickable" onClick="copyText('${proxyLink}')">Copy</td>
-      `
+      `;
     tr.innerHTML = trContent;
-    document.querySelector('table tbody').appendChild(tr);
+    document.querySelector("table tbody").appendChild(tr);
     tester.updateConfigPing(proxyLink, index);
   });
 }
 
 function get_configs(isBase64 = false) {
-  const tbody = document.querySelector('tbody');
+  const tbody = document.querySelector("tbody");
   const isMobile = isMobileDevice();
 
-  if(isMobile){
-    document.getElementsByTagName('th')[2].innerHTML = 'Config Hash';
+  if (isMobile) {
+    document.getElementsByTagName("th")[2].innerHTML = "Config Hash";
   }
 
   while (tbody.firstChild) {
@@ -116,9 +124,9 @@ function get_configs(isBase64 = false) {
         const protocol = proxyLink.substring(0, proxyLink.indexOf(":"));
         const length = proxyLink.length;
         if (length > lengthLimit) {
-          if(isMobile){
-            link= hash(proxyLink, 8);
-          }else{
+          if (isMobile) {
+            link = hash(proxyLink, 8);
+          } else {
             link = proxyLink.substring(0, lengthLimit) + "...";
           }
         }
@@ -130,9 +138,9 @@ function get_configs(isBase64 = false) {
                   <td>${link}</td>
                   <td class="warning bx-flashing-v2" id="conf${index}"> --- </td>
                   <td class="primary clickable" onClick="copyText('${proxyLink}')">Copy</td>
-      `
+      `;
         tr.innerHTML = trContent;
-        document.querySelector('table tbody').appendChild(tr);
+        document.querySelector("table tbody").appendChild(tr);
         tester.updateConfigPing(proxyLink, index);
       });
 
@@ -153,7 +161,7 @@ function get_configs(isBase64 = false) {
         alert(`Copied to clipboard: ${text}`);
       }
 
-      document.querySelector('.total-count').innerHTML = `
+      document.querySelector(".total-count").innerHTML = `
         <div style="font-size: x-small; display: inline">(${configLines.length})</div>
       `;
     })
@@ -162,7 +170,7 @@ function get_configs(isBase64 = false) {
 
 // Rest of the code remains the same...
 function get_contributors() {
-  const contributors = document.querySelector('#contributors');
+  const contributors = document.querySelector("#contributors");
   var x = "";
   fetch(contributors_url)
     .then((response) => response.json())
@@ -218,6 +226,6 @@ closeBtn.addEventListener("click", function () {
 scroll_bottom.addEventListener("click", function () {
   window.scrollTo({
     top: document.body.scrollHeight,
-    behavior: 'smooth'
+    behavior: "smooth",
   });
 });

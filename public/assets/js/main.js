@@ -1,17 +1,23 @@
-sub_url = "https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/v2ray/all_sub.txt";
+sub_url =
+  "https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/v2ray/all_sub.txt";
 
 get_configs();
 get_contributors();
 
 refresh_btn.addEventListener("click", function () {
-    refresh_i.classList.add("bx-spin");
-    get_configs(isBase64=false);
-    setTimeout(() => { refresh_i.classList.remove("bx-spin") }, 1000);
+  refresh_i.classList.add("bx-spin");
+  get_configs((isBase64 = false));
+  setTimeout(() => {
+    refresh_i.classList.remove("bx-spin");
+  }, 1000);
 });
 
 show_all?.addEventListener("click", function () {
-  if (show_all.innerHTML.trim() ===  `<i class="bx bx-up-arrow-alt bx-fade-up"></i>&nbsp;&nbsp;Show
-              Less&nbsp;&nbsp;<i class="bx bx-up-arrow-alt bx-fade-up"></i>`) {
+  if (
+    show_all.innerHTML.trim() ===
+    `<i class="bx bx-up-arrow-alt bx-fade-up"></i>&nbsp;&nbsp;Show
+              Less&nbsp;&nbsp;<i class="bx bx-up-arrow-alt bx-fade-up"></i>`
+  ) {
     get_configs(false);
     show_all.innerHTML = `
     <i class="bx bx-down-arrow-alt bx-fade-down"></i>&nbsp;&nbsp;Show
@@ -30,8 +36,8 @@ show_all?.addEventListener("click", function () {
   }
 });
 
-const sub = document.querySelector('.sub');
-if(isMobileDevice()){
+const sub = document.querySelector(".sub");
+if (isMobileDevice()) {
   sub.innerHTML += `
   <div class="sub-title" style="width: 30%">⚡ SubLink :</div>
   <div
@@ -41,7 +47,7 @@ if(isMobileDevice()){
     .../subscriptions/v2ray/all_sub.txt
   </div>
 `;
-}else{
+} else {
   sub.innerHTML += `
   <div class="sub-title">⚡ SubLink :</div>
   <div
