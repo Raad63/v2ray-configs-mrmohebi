@@ -821,6 +821,7 @@ main .recent-order a {
 .textToCopy:hover {
   cursor: pointer;
   text-wrap: pretty;
+  color: rgb(131, 131, 255);
 }
 
 .clickable:hover {
