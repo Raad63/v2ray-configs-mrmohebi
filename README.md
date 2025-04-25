@@ -20,16 +20,16 @@ Choose either method:
 1. Use the subscription URLs provided
 2. Manually download configs from `subscriptions` folder
 
-### ♾️ Super Subscription
-- The best configs over all configs by testing results:
-```
-https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/v2ray/super-sub.txt
-```
-
 ### 🔗 All Subscriptions
 - All Protocols [+7500 configs]:
 ```
 https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/v2ray/all_sub.txt
+```
+
+### ♾️ Super Subscription
+- The best configs over all configs by testing results:
+```
+https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/v2ray/super-sub.txt
 ```
 
 ### 👨‍🚀 Splitted Subscriptions
