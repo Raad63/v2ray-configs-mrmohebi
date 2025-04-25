@@ -17,15 +17,17 @@ function copyText(text) {
   alert(`Text copied to clipboard!`);
 }
 
-function shuffle(array) {
-  let currentIndex = array.length;
-  while (currentIndex != 0) {
-    let randomIndex = Math.floor(Math.random() * currentIndex);
-    currentIndex--;
-    [array[currentIndex], array[randomIndex]] = [
-      array[randomIndex],
-      array[currentIndex],
-    ];
+function shuffle(array, shuffleCount = 1) {
+  for (let index = 0; index < shuffleCount; index++) {
+    let currentIndex = array.length;
+    while (currentIndex != 0) {
+      let randomIndex = Math.floor(Math.random() * currentIndex);
+      currentIndex--;
+      [array[currentIndex], array[randomIndex]] = [
+        array[randomIndex],
+        array[currentIndex],
+      ];
+    }
   }
 }
 
@@ -110,7 +112,7 @@ function get_configs(isBase64 = false) {
 
       const table = document.getElementById("proxy-table");
       lines = lines.slice(5, lines.length);
-      shuffle(lines);
+      shuffle(lines, 2);
 
       configLines = lines;
 
