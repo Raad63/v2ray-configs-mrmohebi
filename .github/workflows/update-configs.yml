@@ -35,11 +35,31 @@ jobs:
       - name: Filter sub files
         run: python src/filter_subs.py
 
+      - name: Update contributors
+        run: python src/update_contributors.py
+
+      - name: Commit and push files
+        uses: EndBug/add-and-commit@v7
+        with:
+          push: "https://github.com/MatinGhanbari/v2ray-configs.git"
+          message: "Update v2ray configs"
+          author_email: "actions@github.com"
+          author_name: "Github Actions"
+          add: "subscriptions public"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
       - name: Update SuperSub
         run: python src/update_supersub.py
 
-      - name: Update contributors
-        run: python src/update_contributors.py
+      - name: Commit and push files
+        uses: EndBug/add-and-commit@v7
+        with:
+          push: "https://github.com/MatinGhanbari/v2ray-configs.git"
+          message: "Update Supersub"
+          author_email: "actions@github.com"
+          author_name: "Github Actions"
+          add: "subscriptions"
 
       # - name: Commit Files
       #   run: |
@@ -55,13 +75,13 @@ jobs:
       #     github_token: ${{ secrets.GITHUB_TOKEN }}
       #     branch: main
 
-      - name: Commit and push files
-        uses: EndBug/add-and-commit@v7
-        with:
-          push: "https://github.com/MatinGhanbari/v2ray-configs.git"
-          message: "Update v2ray configs"
-          author_email: "actions@github.com"
-          author_name: "Github Actions"
-          add: "subscriptions public"
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      # - name: Commit and push files
+      #   uses: EndBug/add-and-commit@v7
+      #   with:
+      #     push: "https://github.com/MatinGhanbari/v2ray-configs.git"
+      #     message: "Update v2ray configs"
+      #     author_email: "actions@github.com"
+      #     author_name: "Github Actions"
+      #     add: "subscriptions public"
+      #   env:
+      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

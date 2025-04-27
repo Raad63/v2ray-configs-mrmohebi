@@ -10,7 +10,7 @@ def update_v2ray():
 
     combined_data = decode_files_links(SETTINGS['sources']['files']) + decode_dirs_links(SETTINGS['sources']['dirs'])
     merged_configs = filter_for_protocols(combined_data, SETTINGS['protocols'])
-    shuffled_configs = shuffle_configs(merged_configs)
+    shuffled_configs = shuffle_configs(merged_configs, n=4)[:int(SETTINGS['all_configs_limit'])]
 
     output_filename = os.path.join(output_folder, "all_sub.txt")
     base64_filename = os.path.join(base64_folder, "all_sub.txt")

@@ -157,7 +157,9 @@ function get_configs(isBase64 = false) {
         <div style="font-size: x-small; display: inline">(${configLines.length})</div>
       `;
     })
-    .catch((error) => console.error(error));
+    .catch((error) => {
+      //  console.error(error);
+    });
 }
 
 // Rest of the code remains the same...
@@ -193,7 +195,9 @@ function get_contributors() {
 
       contributors.innerHTML = x;
     })
-    .catch((error) => console.error(error));
+    .catch((error) => {
+      // console.error(error);
+    });
 }
 
 //SIDE BAR FUNCTION

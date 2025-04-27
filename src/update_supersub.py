@@ -60,14 +60,6 @@ class V2RayPingTester:
             pass
             return {'config': config, 'status': 'unreachable', 'ping': None}
 
-    # def test_all(self):
-    #     results = []
-    #     for config in self.configs:
-    #         result = self.test_single(config)
-    #         if result['ping'] != None:
-    #             results.append(result)
-    #     return results
-
     def test_all(self):
         results = []
         with ThreadPoolExecutor(max_workers=self.max_threads) as executor:
@@ -88,10 +80,8 @@ def make_super_sub():
     raw_repo = SETTINGS['raw_repo']
     out_dir = SETTINGS['out_dir']
     sub_links = [
-        f"{raw_repo}/{out_dir}/filtered/subs/vmess.txt",
-        f"{raw_repo}/{out_dir}/filtered/subs/vless.txt"
+        f"{raw_repo}/{out_dir}/v2ray/all_sub.txt",
     ]
-    print(sub_links)
 
     configs = []
     for url in sub_links:
@@ -105,8 +95,6 @@ def make_super_sub():
         for res in results[:100]:
             configs.append(res['config'])
 
-    # shuffled_configs = shuffle_configs(configs, 5)
-    # data = content_manager.get_v2ray_supersub() + "\n".join(shuffled_configs)
     data = content_manager.get_v2ray_supersub() + "\n".join(configs)
 
     file_path = os.path.join(output_folder, "super-sub.txt")
