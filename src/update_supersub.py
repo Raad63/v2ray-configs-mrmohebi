@@ -92,9 +92,10 @@ def make_super_sub():
 
         tester = V2RayPingTester(configs)
         results = tester.test_all()
-        for res in results[:100]:
+        for res in results:
             configs.append(res['config'])
 
+    configs = configs[:int(SETTINGS['supersub_configs_limit'])]
     data = content_manager.get_v2ray_supersub() + "\n".join(configs)
 
     file_path = os.path.join(output_folder, "super-sub.txt")
