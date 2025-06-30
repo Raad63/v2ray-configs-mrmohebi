@@ -76,6 +76,13 @@ https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions
 https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/filtered/subs/hy2.txt
 ```
 
+## Stats
+[![Stars](https://starchart.cc/MatinGhanbari/v2ray-configs.svg?variant=adaptive)](https://starchart.cc/MatinGhanbari/v2ray-configs)
+
+## Activity
+![Activity](https://repobeats.axiom.co/api/embed/381408388d06985f0df2e3a83b1afcd9b3d0a696.svg "Repobeats analytics image")
+
+
 ## 📱 V2ray Clients
 - [Hiddify-Next](https://github.com/hiddify/hiddify-next)
 - [Nekoray](https://github.com/MatsuriDayo/nekoray)
@@ -86,20 +93,9 @@ If you have a V2ray configuration file that you would like to contribute to this
 ## 📝 License
 This repository is licensed under the MIT license. See [LICENSE](https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/LICENSE) for more information.
 
-## 🙋‍♀️ Contact
-If you have any questions or concerns, please feel free to reach out to us via our discussions tracker.
-
-## Stats
-[![Stars](https://starchart.cc/MatinGhanbari/v2ray-configs.svg?variant=adaptive)](https://starchart.cc/MatinGhanbari/v2ray-configs)
-
-## Activity
-![Activity](https://repobeats.axiom.co/api/embed/381408388d06985f0df2e3a83b1afcd9b3d0a696.svg "Repobeats analytics image")
-
 ## 🤍 Special Thanks To
-[@barry-far](https://github.com/barry-far)
-[@ircfspace](https://github.com/MrPooyaX)
-[@hossein-mohseni](https://github.com/hossein-mohseni)
-[@mahdibland](https://github.com/mahdibland)
 [@MrPooyaX](https://github.com/MrPooyaX)
 [@ALIILAPRO](https://github.com/ALIILAPRO)
+[@mahdibland](https://github.com/mahdibland)
+[@hossein-mohseni](https://github.com/hossein-mohseni)
 [@soroushmirzaei](https://github.com/soroushmirzaei)
