@@ -6,7 +6,7 @@
 
 ---------
 
-🧩 Community-maintained repository offering free V2ray configs to help you browse securely and privately.
+🧩 Community-maintained repository offering free V2ray configs to help you browse securely and privately. 
 
 ## ✨ Key Features
 - Multi-protocol compatibility (VMess, VLESS, Trojan, Shadowsocks, SSR, TUIC, Hysteria2, Warp)
