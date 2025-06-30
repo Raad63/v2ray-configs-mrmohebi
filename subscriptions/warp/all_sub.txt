@@ -1,5 +1,5 @@
 #profile-title: base64:8J+XvSBiMm4uaXIvdjJyYXktY29uZiB8IHdhcnAg8J+MsQ==
-#subscription-userinfo: upload=30; download=30; total=10737418240000000; expire=2546249531
+#subscription-userinfo: upload=20; download=20; total=107374182400; expire=1752019200
 #profile-web-page-url: https://github.com/MatinGhanbari/v2ray-configs
 #support-url: https://github.com/MatinGhanbari/v2ray-configs
 #profile-update-interval: 1
