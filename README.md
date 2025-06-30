@@ -77,10 +77,10 @@ https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions
 ```
 
 ## Stats
-[![Stars](https://starchart.cc/MatinGhanbari/v2ray-configs.svg?variant=adaptive)](https://starchart.cc/MatinGhanbari/v2ray-configs)
+[![Stars](https://starchart.cc/MatinGhanbari/v2ray-configs.svg?variant=adaptive)](https://github.com/MatinGhanbari/v2ray-configs/stargazers)
 
 ## Activity
-![Activity](https://repobeats.axiom.co/api/embed/381408388d06985f0df2e3a83b1afcd9b3d0a696.svg "Repobeats analytics image")
+[![Activity](https://repobeats.axiom.co/api/embed/381408388d06985f0df2e3a83b1afcd9b3d0a696.svg "Repobeats analytics image")](#)
 
 
 ## 📱 V2ray Clients
