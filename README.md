@@ -89,6 +89,9 @@ This repository is licensed under the MIT license. See [LICENSE](https://raw.git
 ## 🙋‍♀️ Contact
 If you have any questions or concerns, please feel free to reach out to us via our discussions tracker.
 
+## Stats
+[![Stars](https://starchart.cc/MatinGhanbari/v2ray-configs.svg?variant=adaptive)](https://starchart.cc/MatinGhanbari/v2ray-configs)
+
 ## 🤍 Special Thanks To
 [@barry-far](https://github.com/barry-far)
 [@ircfspace](https://github.com/MrPooyaX)
