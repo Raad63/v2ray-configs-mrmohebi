@@ -92,6 +92,9 @@ If you have any questions or concerns, please feel free to reach out to us via o
 ## Stats
 [![Stars](https://starchart.cc/MatinGhanbari/v2ray-configs.svg?variant=adaptive)](https://starchart.cc/MatinGhanbari/v2ray-configs)
 
+## Activity
+![Activity](https://repobeats.axiom.co/api/embed/381408388d06985f0df2e3a83b1afcd9b3d0a696.svg "Repobeats analytics image")
+
 ## 🤍 Special Thanks To
 [@barry-far](https://github.com/barry-far)
 [@ircfspace](https://github.com/MrPooyaX)
