@@ -38,11 +38,15 @@ jobs:
       - name: Update contributors
         run: python src/update_contributors.py
 
+      - name: set release date
+        run: |
+          echo "RELEASE_DATE=$(date -u +'%Y-%m-%d %H:%M:%S UTC')" >> ${ACTION_DT}
+          
       - name: Commit and push files
         uses: EndBug/add-and-commit@v7
         with:
           push: "https://github.com/MatinGhanbari/v2ray-configs.git"
-          message: "✔️ $(date -u +'%Y-%m-%d %H:%M:%S UTC') Update v2ray configs"
+          message: "✔️ ${ACTION_DT} Update v2ray configs"
           author_email: "actions@github.com"
           author_name: "Github Actions"
           add: "subscriptions public"
@@ -56,7 +60,7 @@ jobs:
         uses: EndBug/add-and-commit@v7
         with:
           push: "https://github.com/MatinGhanbari/v2ray-configs.git"
-          message: "♾️ $(date -u +'%Y-%m-%d %H:%M:%S UTC') Update super sub"
+          message: "♾️ ${ACTION_DT} Update super sub"
           author_email: "actions@github.com"
           author_name: "Github Actions"
           add: "subscriptions"
