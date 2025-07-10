@@ -7,11 +7,15 @@ def update_contributors():
     response = requests.get(url)
     if response.status_code == 200:
         contributors = response.json()
-        owner = next((item for item in contributors if item.get("id") == 85116522), None)
-        contributors.remove(owner)
+        for c in contributors:
+            if c.get("id") == 85116522:
+                contributors.remove(c)
+                break
         output_file_path = r"public/assets/data/contributors.json"
         with open(output_file_path, 'w+', encoding="utf-8") as json_file:
             json.dump(contributors, json_file, indent=4)
+
+    print(json.dumps(contributors, indent=4))
 
 if __name__ == "__main__":
     update_contributors()
