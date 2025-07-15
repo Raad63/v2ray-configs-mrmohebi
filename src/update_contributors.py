@@ -15,7 +15,5 @@ def update_contributors():
         with open(output_file_path, 'w+', encoding="utf-8") as json_file:
             json.dump(contributors, json_file, indent=4)
 
-    print(json.dumps(contributors, indent=4))
-
 if __name__ == "__main__":
     update_contributors()
